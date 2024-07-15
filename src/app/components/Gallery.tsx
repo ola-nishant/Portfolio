@@ -5,7 +5,7 @@ import "../globals.css";
 
 const Gallery = () => {
   return (
-    <div className="flex flex-col xl:gap-6 md:gap-3 gap-2  mx-auto">
+    <div className="flex flex-col xl:gap-6 md:gap-3 gap-2 mx-auto">
       <Image
         src="https://framerusercontent.com/images/8Fk6RlgtqXHopQpMemxEHY24eI8.png"
         alt="Gallery Image 1"

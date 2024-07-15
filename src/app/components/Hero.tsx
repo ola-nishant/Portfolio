@@ -2,9 +2,9 @@ import React from "react";
 import { Button } from "@nextui-org/button";
 
 function Hero() {
-  return (
-    <div className="flex mx-auto my-12 xl:gap-12 gap-10 xl:flex-row flex-col">
-      <h1 className="md:text-[76px] text-[40px] text-wrap text-left leading-hero md:text-nowrap tracking-tighter font-medium">
+  return ( 
+    <div className="flex mx-auto my-12 xl:gap-12 gap-10 xl:flex-row xl:items-center flex-col ">
+      <h1 className="2xl:text-[76px] md:text-[61px] text-[40px] text-wrap text-left leading-hero md:text-nowrap tracking-tighter font-medium">
         Nishant Ola.
         <br />
         Developer/Designer
@@ -15,7 +15,7 @@ function Hero() {
           resonant. I also design user interfaces that are intuitive and
           user-friendly.
         </h3>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-3">
           <Button
             size="sm"
             variant="ghost"
