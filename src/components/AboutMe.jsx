@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import IconA from "@/components/svg-icons/IconA";
@@ -11,17 +11,44 @@ import IconE from "@/components/svg-icons/IconE";
 const iconVariants = {
   normal: {
     rotate: 0,
-    transition: { duration: 1 }
+    transition: { duration: 0.5 } 
   },
   rotated: {
-    rotate: 540,
-    transition: { duration: 0.5 }
+    rotate: 720,
+    transition: { duration: 0.5 } 
   }
 };
 
 function AboutMe() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); 
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize); 
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handleInteraction = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
+
+  const getAnimationProps = (index) => {
+    return {
+      variants: iconVariants,
+      initial: "normal",
+      animate: activeIndex === index ? "rotated" : "normal",
+      whileHover: !isMobile ? "rotated" : undefined,
+    };
+  };
+
   return (
-    <div className="md:my-[80px] my-10 w-full">
+    <div className="my-[80px] w-full">
       <div className='my-[40px] flex w-full flex-col'>
         <div className="flex flex-row justify-start gap-4 items-start w-[100%]">
           <IconE />
@@ -31,12 +58,12 @@ function AboutMe() {
           <AccordionItem
             key="1"
             aria-label="Education"
+            onClick={() => isMobile && handleInteraction(1)}
+            onMouseEnter={() => !isMobile && handleInteraction(1)}
+            onMouseLeave={() => !isMobile && handleInteraction(null)}
+            onClickCapture={() => !isMobile && handleInteraction(1)}
             startContent={
-              <motion.div
-                variants={iconVariants}
-                initial="normal"
-                whileHover="rotated"
-              >
+              <motion.div {...getAnimationProps(1)}>
                 <IconA />
               </motion.div>
             }
@@ -47,12 +74,12 @@ function AboutMe() {
           <AccordionItem
             key="2"
             aria-label="Experience"
+            onClick={() => isMobile && handleInteraction(2)}
+            onMouseEnter={() => !isMobile && handleInteraction(2)}
+            onMouseLeave={() => !isMobile && handleInteraction(null)}
+            onClickCapture={() => !isMobile && handleInteraction(2)}
             startContent={
-              <motion.div
-                variants={iconVariants}
-                initial="normal"
-                whileHover="rotated"
-              >
+              <motion.div {...getAnimationProps(2)}>
                 <IconB />
               </motion.div>
             }
@@ -63,12 +90,12 @@ function AboutMe() {
           <AccordionItem
             key="3"
             aria-label="Skillset"
+            onClick={() => isMobile && handleInteraction(3)}
+            onMouseEnter={() => !isMobile && handleInteraction(3)}
+            onMouseLeave={() => !isMobile && handleInteraction(null)}
+            onClickCapture={() => !isMobile && handleInteraction(3)}
             startContent={
-              <motion.div
-                variants={iconVariants}
-                initial="normal"
-                whileHover="rotated"
-              >
+              <motion.div {...getAnimationProps(3)}>
                 <IconC />
               </motion.div>
             }
@@ -79,12 +106,12 @@ function AboutMe() {
           <AccordionItem
             key="4"
             aria-label="Hobbies"
+            onClick={() => isMobile && handleInteraction(4)}
+            onMouseEnter={() => !isMobile && handleInteraction(4)}
+            onMouseLeave={() => !isMobile && handleInteraction(null)}
+            onClickCapture={() => !isMobile && handleInteraction(4)}
             startContent={
-              <motion.div
-                variants={iconVariants}
-                initial="normal"
-                whileHover="rotated"
-              >
+              <motion.div {...getAnimationProps(4)}>
                 <IconD />
               </motion.div>
             }
