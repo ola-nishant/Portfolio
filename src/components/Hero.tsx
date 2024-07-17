@@ -10,7 +10,7 @@ function Hero() {
         Developer/Designer
       </h1>
       <div className="flex flex-col gap-6">
-        <h3 className="text-[18px] font-semibold leading-snug">
+        <h3 className="text-[18px] font-semibold leading-snug tracking-tighter">
           I code websites that are both aesthetically pleasing and emotionally
           resonant. I also design user interfaces that are intuitive and
           user-friendly.
