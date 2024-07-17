@@ -11,7 +11,7 @@ const hrVariants = {
             type: "spring",
             stiffness: 100,
             damping: 20,
-            duration: 0.5
+            duration: 0
         }
     },
     expanded: {
@@ -41,7 +41,7 @@ export default function Nav() {
     };
 
     return (
-        <Navbar isBordered isBlurred={false} onMenuOpenChange={setIsMenuOpen} className='h-[5rem] md:px-[15vw] px-[5vw]'>
+        <Navbar position="static" isBordered isBlurred={false} onMenuOpenChange={setIsMenuOpen} className='h-[5rem] md:px-[15vw] px-[5vw]'>
             <NavbarContent className="max-w-[1278px]">
                 <NavbarBrand>
                     <MainIcon />
