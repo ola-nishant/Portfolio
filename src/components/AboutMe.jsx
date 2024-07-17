@@ -7,6 +7,7 @@ import IconB from "@/components/svg-icons/IconB";
 import IconC from "@/components/svg-icons/IconC";
 import IconD from "@/components/svg-icons/IconD";
 import IconE from "@/components/svg-icons/IconE";
+import Education from "@/components/About-me/Education";
 
 const iconVariants = {
   normal: {
@@ -48,7 +49,7 @@ function AboutMe() {
   };
 
   return (
-    <div className="my-[80px] w-full">
+    <div className="md:my-[80px] my-[50px] w-full">
       <div className='my-[40px] flex w-full flex-col'>
         <div className="flex flex-row justify-start gap-4 items-start w-[100%]">
           <IconE />
@@ -69,7 +70,7 @@ function AboutMe() {
             }
             title={<span className="font-semibold text-[22px] ml-1">Education</span>}
           >
-            accor1
+            <Education />
           </AccordionItem>
           <AccordionItem
             key="2"
