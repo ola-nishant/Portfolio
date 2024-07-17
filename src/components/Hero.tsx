@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/button";
 function Hero() {
   return ( 
     <div className="flex mx-auto md:my-16 my-9 xl:gap-12 gap-5 xl:flex-row xl:items-center flex-col ">
-      <h1 className="2xl:text-[76px] md:text-[61px] text-[40px] text-wrap text-left leading-hero md:text-nowrap tracking-tighter font-medium">
+      <h1 className="2xl:text-[76px] md:text-[61px] text-[38px] text-wrap text-left leading-hero md:text-nowrap tracking-tighter font-medium">
         Nishant Ola.
         <br />
         Developer/Designer
@@ -15,7 +15,7 @@ function Hero() {
           resonant. I also design user interfaces that are intuitive and
           user-friendly.
         </h3>
-        <div className="flex flex-row gap-3">
+        <div className="flex flex-row md:gap-3 gap-2">
           <Button
             size="sm"
             variant="ghost"
