@@ -9,6 +9,7 @@ import IconD from "@/components/svg-icons/IconD";
 import IconE from "@/components/svg-icons/IconE";
 import Education from "@/components/About-me/Education";
 import Experience from "@/components/About-me/Experience";
+import Skills from "@/components/About-me/Skills";
 
 const iconVariants = {
   normal: {
@@ -103,7 +104,7 @@ function AboutMe() {
             }
             title={<span className="font-semibold text-[22px] ml-1">Skillset</span>}
           >
-            accor1
+            <Skills />
           </AccordionItem>
           <AccordionItem
             key="4"

@@ -43,7 +43,7 @@ function Experience() {
                 <div key={item.id} className="flex flex-col my-12 md:pl-[20px]">
                     <div className="flex flex-row">
                         <p className="text-small text-default-400 absolute md:ml-[-20px] ml-[-16px]">{`0${item.id}`}</p>
-                        <h4 className="md:text-[44px] text-[36px] font-semibold text-black tracking-tighter leading-hero md:max-w-[40%]">{item.company}</h4>
+                        <h4 className="md:text-[40px] text-[36px] font-semibold text-black tracking-tighter leading-hero md:max-w-[40%]">{item.company}</h4>
 
                     </div>
                     <div className='flex md:flex-row flex-col py-4 w-full md:justify-between justify-start md:items-center'>
