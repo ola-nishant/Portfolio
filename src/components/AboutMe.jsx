@@ -58,22 +58,6 @@ function AboutMe() {
         </div>
         <Accordion className="my-4">
           <AccordionItem
-            key="1"
-            aria-label="Education"
-            onClick={() => isMobile && handleInteraction(1)}
-            onMouseEnter={() => !isMobile && handleInteraction(1)}
-            onMouseLeave={() => !isMobile && handleInteraction(null)}
-            onClickCapture={() => !isMobile && handleInteraction(1)}
-            startContent={
-              <motion.div {...getAnimationProps(1)}>
-                <IconA />
-              </motion.div>
-            }
-            title={<span className="font-semibold text-[22px] ml-1">Education</span>}
-          >
-            <Education />
-          </AccordionItem>
-          <AccordionItem
             key="2"
             aria-label="Experience"
             onClick={() => isMobile && handleInteraction(2)}
@@ -88,6 +72,22 @@ function AboutMe() {
             title={<span className="font-semibold text-[22px] ml-1">Experience</span>}
           >
             <Experience />
+          </AccordionItem>
+          <AccordionItem
+            key="1"
+            aria-label="Education"
+            onClick={() => isMobile && handleInteraction(1)}
+            onMouseEnter={() => !isMobile && handleInteraction(1)}
+            onMouseLeave={() => !isMobile && handleInteraction(null)}
+            onClickCapture={() => !isMobile && handleInteraction(1)}
+            startContent={
+              <motion.div {...getAnimationProps(1)}>
+                <IconA />
+              </motion.div>
+            }
+            title={<span className="font-semibold text-[22px] ml-1">Education</span>}
+          >
+            <Education />
           </AccordionItem>
           <AccordionItem
             key="3"
