@@ -28,7 +28,7 @@ const experience = [
     },
     {
         id: 4,
-        company: "Zeigen",
+        company: "Zeigen Health",
         desc: "Designed the entire user interface and user experience for the mobile application using Figma, ensuring seamless navigation and intuitive interactions that resonate with the target audience’s preferences and expectations, scoring a user satisfaction rating of 4.8/5 in more than 500 responses during alpha testing phase.",
         role: "UIUX Design",
         duration: "November 2022 - January 2023",
@@ -42,7 +42,7 @@ function Experience() {
             {experience.map((item) => (
                 <div key={item.id} className="flex flex-col my-12 md:pl-[20px]">
                     <div className="flex flex-row">
-                        <p className="text-small text-default-400 absolute md:ml-[-20px] ml-[-16px]">{`0${item.id}`}</p>
+                        <p className="text-tiny md:text-small text-default-400 absolute md:ml-[-20px] ml-[-16px]">{`0${item.id}`}</p>
                         <h4 className="md:text-[40px] text-[36px] font-semibold text-black tracking-tighter leading-hero md:max-w-[40%]">{item.company}</h4>
 
                     </div>
