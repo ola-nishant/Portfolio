@@ -5,7 +5,7 @@ function Hobbies() {
     return (
         <div className="flex md:flex-col flex-row md:items-end items-start">
             <div className="flex flex-col md:w-[80%] w-full my-2 md:items-stretch items-start">
-                <div className="flex md:flex-row flex-col h-5 md:items-end items-start md:space-x-4 justify-between text-[#5f6980]">
+                <div className="flex md:flex-row flex-col h-5 md:items-end items-start justify-between text-[#5f6980] md:flex-wrap">
                     <div>Reading fiction books</div>
                     <Divider orientation="vertical" className='hidden md:block' />
                     <div>Sketching portraits</div>

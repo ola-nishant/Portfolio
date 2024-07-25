@@ -15,11 +15,11 @@ import Hobbies from "@/components/About-me/Hobbies";
 const iconVariants = {
   normal: {
     rotate: 0,
-    transition: { duration: 0.5 } 
+    transition: { duration: 0.5 }
   },
   rotated: {
     rotate: 720,
-    transition: { duration: 0.5 } 
+    transition: { duration: 0.5 }
   }
 };
 
@@ -29,11 +29,11 @@ function AboutMe() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); 
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); 
-    window.addEventListener('resize', handleResize); 
+    handleResize();
+    window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -52,8 +52,8 @@ function AboutMe() {
   };
 
   return (
-    <div className="md:my-[80px] my-[50px] w-full">
-      <div className='my-[40px] flex w-full flex-col'>
+    <div className="md:my-[70px] my-[50px] w-full">
+      <div className='mt-[40px] flex w-full flex-col'>
         <div className="flex flex-row justify-start gap-4 items-start w-[100%]">
           <IconE />
           <h4 className='font-light'>ABOUT ME</h4>
