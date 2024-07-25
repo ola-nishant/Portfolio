@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import IconE from "@/components/svg-icons/IconE";
 import Card from "@/components/Card";
@@ -6,34 +7,38 @@ const projects = [
     {
         id: 1,
         title: "DevFeed",
-        src: "",
+        src: "https://framerusercontent.com/images/9iWifFRDqBox1KcbJLOzxHXEpQ.png",
         link: "https://github.com/ola-nishant/DevFeed",
         tags: ['Next.js', 'Clerk', 'MongoDB'],
     },
     {
         id: 2,
         title: "Java to x86_64 Toy Compiler",
-        src: "",
+        src: "https://framerusercontent.com/images/gnqxx4ffUgrD3uvgo2zKbUeLtk.png",
         link: "https://github.com/ola-nishant/Java-to-x86_64-compiler",
         tags: ['Java', 'Yacc', 'Bison'],
     },
     {
         id: 3,
         title: "Bhoomi",
-        src: "",
+        src: "https://i.ibb.co/0CWh5SL/after-login.png",
         link: "https://www.figma.com/design/V2EogHHzWtk4fyFmQn31e9/Bhoomi?node-id=0-1&t=axAbuNRRVbJzSDVQ-1",
-        tags: ['UIUX', 'Web#'],
+        tags: ['UIUX', 'Web3'],
     },
     {
         id: 4,
-        title: "Bhoomi",
-        src: "",
+        title: "Trinity",
+        src: "https://framerusercontent.com/images/JZTFz167pysdqtJV4zXShLQQ.png",
         link: "https://www.figma.com/design/V2EogHHzWtk4fyFmQn31e9/Bhoomi?node-id=0-1&t=axAbuNRRVbJzSDVQ-1",
-        tags: ['UIUX', 'Web#'],
+        tags: ['UIUX', 'Web3'],
     },
 ]
 
 function Projects(props) {
+    const handleCardClick = (link) => {
+        window.open(link, '_blank');
+    };
+
     return (
         <div className="w-full">
             <div className="flex flex-row justify-start gap-4 items-start w-[100%]">
@@ -49,6 +54,7 @@ function Projects(props) {
                         src={project.src}
                         link={project.link}
                         tags={project.tags}
+                        onClick={() => handleCardClick(project.link)}
                     />
                 ))}
             </div>
