@@ -75,6 +75,7 @@ function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (validateForm()) {
+            const toastId = toast.loading("Sending...");
             try {
                 const formContent = {
                     "name": form.name,
@@ -90,9 +91,11 @@ function Contact() {
                 });
 
                 if (response.ok) {
+                    toast.dismiss(toastId); 
                     notify("I'll contact you shortly!");
                     setForm({ name: "", email: "", message: "" }); // Reset form after submission
                 } else {
+                    toast.dismiss(toastId); 
                     const errorData = await response.json();
                     notify(`Failed to send: ${errorData.message}`, true);
                 }

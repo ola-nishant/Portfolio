@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
     const mailOptions = {
       from: `bolsneedlicking69@gmail.com`, // Replace with your sender email
-      to: "boldneedlicking69@gmail.com", // Replace with your recipient email
+      to: "bolsneedlicking69@gmail.com", // Replace with your recipient email
       subject: "New Portfolio Form Submission",
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`,
