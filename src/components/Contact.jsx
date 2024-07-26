@@ -3,7 +3,18 @@ import React, { useState } from 'react';
 import IconRight from './svg-icons/IconRight';
 import { Button } from "@nextui-org/button";
 import { motion } from "framer-motion";
+import toast, { Toaster } from 'react-hot-toast';
 
+const notify = () => toast("I'll contact you shortly!",
+    {
+      icon: '👋',
+      style: {
+        borderRadius: '10px',
+        background: 'black',
+        color: '#fff',
+      },
+    }
+  );
 const iconVariants = {
     normal: {
         rotate: 0,
@@ -64,6 +75,7 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault(); 
         if (validateForm()) {
+            notify();
             console.log("Form is valid:", form);
         }
     };
@@ -128,6 +140,7 @@ function Contact() {
                 <div className="md:font-medium font-light text-small text-gray-400 w-full md:py-8 py-2 text-center">
                     © Nishant Ola 2024
                 </div>
+                <Toaster />
             </form>
         </div>
     );
