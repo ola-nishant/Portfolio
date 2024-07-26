@@ -62,15 +62,14 @@ function Contact() {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent form submission
+        e.preventDefault(); 
         if (validateForm()) {
-            // Handle form submission (e.g., send data to an API)
             console.log("Form is valid:", form);
         }
     };
 
     return (
-        <div className="flex flex-col gap-8 mx-auto w-full bg-black xl:rounded-large md:rounded-medium rounded-small items-center md:my-[90px] my-[70px] py-[50px] px-4">
+        <div className="flex flex-col gap-8 mx-auto w-full bg-black xl:rounded-large md:rounded-medium rounded-small items-center md:my-[90px] my-[70px] py-[50px] px-4" id="Hero">
             <h1 className="2xl:text-[56px] md:text-[41px] text-[28px] leading-hero md:text-nowrap tracking-tighter font-medium text-white">
                 Let&apos;s get in touch!
             </h1>

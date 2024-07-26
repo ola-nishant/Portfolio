@@ -10,11 +10,19 @@ export default function Home() {
     <>
       <Nav />
       <div className="flex flex-col justify-center items-center md:px-[15vw] px-[5vw]">
-        <Hero />
+        <section id="Home" className="w-full">
+          <Hero />
+        </section>
         <Gallery />
-        <AboutMe />
-        <Projects />
-        <Contact />
+        <section id="About" className="w-full">
+          <AboutMe />
+        </section>
+        <section id="Projects" className="w-full">
+          <Projects />
+        </section>
+        <section id="Contact" className="w-full">
+          <Contact />
+        </section>
       </div>
     </>
   );
