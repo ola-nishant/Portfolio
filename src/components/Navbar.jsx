@@ -3,6 +3,7 @@ import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
 import MainIcon from "@/components/svg-icons/MainIcon"
 import { motion } from "framer-motion";
+import Reveal from "@/app/Reveal";
 
 const hrVariants = {
     normal: {
@@ -31,7 +32,7 @@ export default function Nav() {
     const delayedSetIsMenuOpen = (val) => {
         setTimeout(() => {
             setIsMenuOpen(val)
-        }, );
+        },);
     }
     const menuItems = [
         { name: "Home", id: "Home" },
@@ -61,26 +62,28 @@ export default function Nav() {
                         onMouseEnter={() => handleInteraction(index)}
                         onMouseLeave={() => handleInteraction(null)}
                     >
-                        <Link
-                            className="w-full"
-                            href={`#${item.id}`}
-                            size="lg"
-                            onClick={() => delayedSetIsMenuOpen(false)}
-                        >
-                            <div className="flex flex-col w-full md:px-[15vw] px-[5vw]">
-                                <div className="flex flex-row gap-2">
-                                    <p className="text-small text-default-400">{`0${index + 1}`}</p>
-                                    <h4 className="md:text-[54px] text-[36px] font-semibold text-black tracking-tighter">{item.name}</h4>
+                        <Reveal x={-index*100} y={0} delayTime={0.1}>
+                            <Link
+                                className="w-full"
+                                href={`#${item.id}`}
+                                size="lg"
+                                onClick={() => delayedSetIsMenuOpen(false)}
+                            >
+                                <div className="flex flex-col w-full md:px-[15vw] px-[5vw]">
+                                    <div className="flex flex-row gap-2">
+                                        <p className="text-small text-default-400">{`0${index + 1}`}</p>
+                                        <h4 className="md:text-[54px] text-[36px] font-semibold text-black tracking-tighter">{item.name}</h4>
+                                    </div>
+                                    <hr className="md:my-6 my-2 min-w-full border-b-1" />
+                                    <motion.div
+                                        className="border-b-3 border-black relative md:bottom-6 bottom-2"
+                                        initial="normal"
+                                        animate={hoveredIndex === index ? "expanded" : "normal"}
+                                        variants={hrVariants}
+                                    />
                                 </div>
-                                <hr className="md:my-6 my-2 min-w-full border-b-1" />
-                                <motion.div
-                                    className="border-b-3 border-black relative md:bottom-6 bottom-2"
-                                    initial="normal"
-                                    animate={hoveredIndex === index ? "expanded" : "normal"}
-                                    variants={hrVariants}
-                                />
-                            </div>
-                        </Link>
+                            </Link>
+                        </Reveal>
                     </NavbarMenuItem>
                 ))}
             </NavbarMenu>

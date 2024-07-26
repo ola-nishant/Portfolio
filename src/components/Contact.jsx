@@ -76,7 +76,7 @@ function Contact() {
         e.preventDefault(); 
         if (validateForm()) {
             notify();
-            console.log("Form is valid:", form);
+            // console.log("Form is valid:", form);
         }
     };
 
