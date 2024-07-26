@@ -77,6 +77,7 @@ function Contact() {
         if (validateForm()) {
             notify();
             // console.log("Form is valid:", form);
+            
         }
     };
 
