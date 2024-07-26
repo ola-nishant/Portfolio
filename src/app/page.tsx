@@ -10,11 +10,11 @@ import Reveal from "./Reveal";
 export default function Home() {
   return (
     <>
-      <Reveal y={-75} delayTime={0} duration={0.2}>
+      <Reveal y={-75} delayTime={0}>
         <Nav /> 
       </Reveal>
       <div className="flex flex-col justify-center items-center md:px-[15vw] px-[5vw]">
-        <Reveal delayTime={0} duration={0.2}>
+        <Reveal delayTime={0}>
           <section id="Home" className="w-full">
             <Hero />
           </section>
