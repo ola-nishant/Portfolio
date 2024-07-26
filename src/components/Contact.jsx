@@ -177,9 +177,9 @@ function Contact() {
                 </Button>
 
                 <div className="flex flex-row md:gap-8 text-wrap md:pt-16 pt-8 items-center md:justify-center justify-between text-white md:font-medium px-8">
-                    <a href="">Home</a>
-                    <a href="">About Me</a>
-                    <a href="">Projects</a>
+                    <a href="#">Home</a>
+                    <a href="#About">About Me</a>
+                    <a href="#Projects">Projects</a>
                 </div>
                 <div className="md:font-medium font-light text-small text-gray-400 w-full md:py-8 py-2 text-center">
                     © Nishant Ola 2024
