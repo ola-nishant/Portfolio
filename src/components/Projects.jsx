@@ -6,17 +6,17 @@ import Card from "@/components/Card";
 const projects = [
     {
         id: 1,
+        title: "Smoothy",
+        src: "https://i.ibb.co/SJkRkN1/image-removebg-preview.png",
+        link: "https://github.com/MR-DHRUV/Smoothy",
+        tags: ['Machine Learning', 'Research'],
+    },
+    {
+        id: 2,
         title: "DevFeed",
         src: "https://framerusercontent.com/images/9iWifFRDqBox1KcbJLOzxHXEpQ.png",
         link: "https://github.com/ola-nishant/DevFeed",
         tags: ['Next.js', 'Clerk', 'MongoDB'],
-    },
-    {
-        id: 2,
-        title: "Java to x86_64 Toy Compiler",
-        src: "https://framerusercontent.com/images/gnqxx4ffUgrD3uvgo2zKbUeLtk.png",
-        link: "https://github.com/ola-nishant/Java-to-x86_64-compiler",
-        tags: ['Java', 'Yacc', 'Bison'],
     },
     {
         id: 3,
@@ -27,10 +27,10 @@ const projects = [
     },
     {
         id: 4,
-        title: "Trinity",
-        src: "https://framerusercontent.com/images/JZTFz167pysdqtJV4zXShLQQ.png",
-        link: "https://www.figma.com/design/V2EogHHzWtk4fyFmQn31e9/Bhoomi?node-id=0-1&t=axAbuNRRVbJzSDVQ-1",
-        tags: ['UIUX', 'Web3'],
+        title: "Java to x86_64 Toy Compiler",
+        src: "https://framerusercontent.com/images/gnqxx4ffUgrD3uvgo2zKbUeLtk.png",
+        link: "https://github.com/ola-nishant/Java-to-x86_64-compiler",
+        tags: ['Java', 'Yacc', 'Bison'],
     },
 ]
 
