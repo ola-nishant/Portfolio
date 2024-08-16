@@ -7,7 +7,7 @@ const projects = [
     {
         id: 1,
         title: "Smoothy",
-        src: "https://i.ibb.co/SJkRkN1/image-removebg-preview.png",
+        src: "/Smoothy copy.png",
         link: "https://github.com/MR-DHRUV/Smoothy",
         tags: ['Machine Learning', 'Research'],
     },
@@ -56,6 +56,7 @@ function Projects(props) {
                         tags={project.tags}
                         onClick={() => handleCardClick(project.link)}
                     />
+                    
                 ))}
             </div>
         </div>
