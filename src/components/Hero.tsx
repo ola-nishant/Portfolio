@@ -57,7 +57,7 @@ function Hero() {
               style={{ transition: "fill 0.3s ease" }}/></svg>}
           >
             <a
-              href="https://drive.google.com/file/d/1XaNbHFD2xXwTlzOdH9nA1SyTIMCDEiT-/view?usp=sharing"
+              href="https://drive.google.com/file/d/1go3TmEd2CYvnpV3bgco95-DM_OoNo5Vf/view?usp=sharing"
               target="_blank"
             >
               Resume
